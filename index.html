@@ -785,41 +785,37 @@
     </div>
     <div>
       <form id="bookingForm" novalidate>
-        <div class="field">
-          <label for="fname">Name</label>
-          <input id="fname" name="name" type="text" required autocomplete="name">
-        </div>
-        <div class="field">
-          <label for="fphone">Phone</label>
-          <input id="fphone" name="phone" type="tel" required autocomplete="tel">
-        </div>
-        <div class="field">
-          <label for="farea">County</label>
-          <select id="farea" name="area" required>
-            <option value="">Select a county</option>
-            <option>Cork</option>
-            <option>Waterford</option>
-            <option>Tipperary</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="fservice">What do you need?</label>
-          <select id="fservice" name="service" required>
-            <option value="">Select an option</option>
-            <option>Single lessons</option>
-            <option>Full EDT programme</option>
-            <option>Test preparation</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="fnote">Anything else we should know</label>
-          <textarea id="fnote" name="note" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Request a callback</button>
-        <p class="form-note">This form is a design placeholder — connect it to your email or booking system before this site goes live.</p>
-        <div id="formSuccess" role="status">Thanks — that's been noted. We'll be in touch shortly.</div>
-      </form>
+       <form
+  action="https://formspree.io/f/{FORM_ID}"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Name</label>
+    <input class="fs-input" id="name" name="name" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email Address</label>
+    <input class="fs-input" id="email" name="email" required />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="number">Phone Number</label>
+    <input class="fs-input" id="number" name="number" />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="message">Inquiry Message</label>
+    <textarea
+      class="fs-textarea"
+      id="message"
+      name="message"
+      required
+    ></textarea>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Submit</button>
+  </div>
+</form>
     </div>
   </div>
 </section>
